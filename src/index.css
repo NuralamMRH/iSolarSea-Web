@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 100% 97%;
+    --foreground: 210 50% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 50% 12%;
+
+    --primary: 200 95% 35%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-glow: 195 100% 45%;
+
+    --secondary: 195 85% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 94%;
+    --muted-foreground: 210 20% 45%;
+
+    --accent: 180 85% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 30% 88%;
+    --input: 210 30% 88%;
+    --ring: 200 95% 35%;
+
+    --radius: 0.75rem;
+    
+    /* Custom ocean theme - soft dim colors */
+    --ocean-light: 195 100% 90%;
+    --ocean-deep: 210 85% 15%;
+    --wave-gradient: linear-gradient(135deg, hsl(200 65% 45%), hsl(195 70% 55%));
+    --hero-gradient: linear-gradient(180deg, hsl(200 60% 40%) 0%, hsl(195 65% 35%) 100%);
+    --card-shadow: 0 4px 20px -2px hsl(200 95% 35% / 0.12);
+    --glow-shadow: 0 0 40px hsl(195 100% 45% / 0.3);
+    --dim-glow: 195 50% 60%;
+    --soft-accent: 180 50% 50%;
+  }
+
+  .dark {
+    --background: 210 50% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 210 40% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 210 40% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 195 100% 45%;
+    --primary-foreground: 210 50% 12%;
+
+    --secondary: 200 85% 30%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 30% 20%;
+    --muted-foreground: 210 20% 65%;
+
+    --accent: 180 85% 40%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 30% 20%;
+    --input: 210 30% 20%;
+    --ring: 195 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .ocean-gradient {
+    background: var(--hero-gradient);
+  }
+  
+  .wave-gradient {
+    background: var(--wave-gradient);
+  }
+  
+  .card-elevated {
+    box-shadow: var(--card-shadow);
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}

@@ -1,0 +1,514 @@
+@charset "utf-8";
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+★　CSS　ショップ・コンテンツ設定　★
+
+■1．規約等ページ
+■2．registフォルダ内設定
+
+■11．その他
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+■1．規約等ページ
+	●買物方法
+	●利用規約
+	●特商法表記義務
+	●個人情報保護方針
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+/*サンプル限りのコンテンツ枠*/
+#shop-content {
+	width:540px;
+	padding:10px;
+}
+/*サンプル限りのコンテンツ枠2*/
+#shop-content2 {
+	float:right;
+	width:480px;
+	padding:10px 110px 10px 10px;
+	background-color:#ffffff;
+}
+
+/*クラス：ガイド内の段落*/
+.guide h3 {
+	margin:6px 0px;
+	padding:3px 6px;
+	border-left:5px solid #afcd00;
+	border-bottom:1px solid #afcd00;
+
+	font-size:18px;
+	font-weight:bold;
+}
+
+.guide h4 {
+	margin:0px 10px;
+	padding:3px 6px;
+	background-color:#e7e7e7;
+
+	font-size:12px;
+	font-weight:bold;
+}
+
+.guide h5 {
+	margin:0px 10px;
+	padding:3px 12px;
+
+	font-size:12px;
+	font-weight:bold;
+}
+
+.guide h6 {
+
+}
+
+.guide p {
+	padding:5px 30px 10px;
+}
+
+.guide table {
+	/*幅はHTML上に記述　こちらに移すことも可能*/
+	margin-left:15px;
+	margin-bottom:20px;
+}
+
+.guide table th{ 
+	/*幅はHTML上に記述　こちらに移すことも可能*/
+	padding:6px;/*セル余白を使用せず*/
+	border:1px solid #cccccc;
+	background-color:#f3f3f3;
+	text-align:center;
+}
+
+.guide table td{ 
+	/*幅はHTML上に記述　こちらに移すことも可能*/
+	padding:6px;/*セル余白を使用せず*/
+	border:1px solid #cccccc;
+	text-align:left;
+}
+
+.guide table td ul{ 
+	padding:10px 15px;
+}
+
+
+.guide ol li {
+	margin: 0 48px 6px;
+	list-style:outside decimal;
+}
+
+
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+■2．registフォルダ内設定
+	●1．カートの中身
+	●2．メール＆パス
+	●3．送信入力
+	●4．送信内容確認
+	●5．送信
+	●6．forgetpass
+			＆changemail設定
+	
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+/*レジスト・ラッパー*/
+.regist {
+	width:540px;
+	padding:10px;
+}
+
+/*見出し*/
+.regist h4 {
+	margin:5px 0px 10px;
+	border-bottom:1px solid #000000;
+	
+	color:#000000;
+	font-weight:bold;
+}
+
+/*カート現在地表示・テーブル*/
+.cartflow {
+	width:530px;
+	margin:10px 5px 20px;
+}
+
+.cartflow td {/*矢印*/
+	padding:1px 3px;
+}
+
+.cartflow th.cartflow-now {/*現在地*/
+	border:1px solid #a7b269;
+	background-color:#AFCD00;
+	color:#ffffff;
+	text-align:center;
+}
+
+.cartflow th.cartflow-none {/*未処理*/
+	border:1px solid #dddddd;
+	background-color:#cccccc;
+	color:#333333;
+	text-align:center;
+}
+
+.cartflow th.cartflow-fin {/*処理済*/
+	border:1px solid #ffffff;
+	background-color:#ffffff;
+	color:#666666;
+	text-align:center;
+}
+
+
+/*価格注釈*/
+.price-info {
+	padding:5px 0 20px 0;
+	text-align:left;
+}
+
+/*エラーメッセージ*/
+#error-disp p {
+	padding:20px;
+	text-align:center;
+	
+	color:#ff0000;
+	font-weight:bold;
+}
+
+#error-disp form {
+	padding-top:10px;
+	text-align:center;
+}
+
+
+/*ページ移動*/
+.step-jump {
+	padding:10px 0;
+	text-align:center;
+}
+
+.step-jump2 {
+	width:100%;
+	margin:20px auto 0px;
+	text-align:center;
+}
+
+.step-jump3 {
+	padding-top:10px;
+	text-align:right;
+}
+
+.step-jump4 {
+	width:510px;
+	padding:0 10px 10px 20px;
+}
+
+.step-jump4 .clear {
+	clear:both;
+}
+
+.step-jump4 li {
+	float:left;
+	width:160px;
+	padding-right:10px;
+}
+
+#step-left {
+	margin:0px;
+	padding:10px 0px;
+	text-align: left;
+	vertical-align: top;
+}
+
+#step-right {
+	margin:0px;
+	padding:10px 10px 10px 0px;
+	text-align: right;
+	vertical-align: top;
+}
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+●2-1．カートの中身
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+TMPL_cartList.html
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+/*残り○○○円で送料無料！*/
+#muryou {
+	width:100%;
+	text-align:right;
+}
+
+
+/*カートの中身・テーブル*/
+#cartlist-table {
+	border-collapse:collapse;
+	border:1px solid #cccccc;
+}
+
+/*カートの中身・テーブルヘッダー*/
+#cartlist-table thead th {
+	padding:3px 0px;
+	border:1px solid #cccccc;
+	background-color:#dddddd;
+	
+	text-align:center;
+	white-space:nowrap;
+}
+
+/*カートの中身・テーブルボディ　～繰り返し部分～*/
+#cartlist-table tbody td {/*右寄せ*/
+	padding:3px 3px 3px 0px;
+	border:1px solid #cccccc;
+	text-align:right;
+}
+
+#cartlist-table tbody .ctr,
+#cartlist-table tbody #deleteform td,
+#cartlist-table tbody #addform td {/*中央寄せ*/
+	padding:3px 0px;
+	border:1px solid #cccccc;
+	text-align:center;
+}
+
+/*カートの中身・テーブルフッター　～小計部分～*/
+#cartlist-table tfoot th {/*右寄せ*/
+	padding:3px 12px 3px 0px;
+	border:1px solid #cccccc;
+	background-color:#dddddd;
+	text-align:right;
+}
+
+#cartlist-table tfoot td {/*右寄せ*/
+	padding:3px 3px 3px 0px;
+	border:1px solid #cccccc;
+	text-align:right;
+}
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+TMPL_input.html ＆ TMPL_confirm.html
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+/*カートの中身・テーブル*/
+#cartcheck {
+	border-collapse:collapse;
+	border:1px solid #cccccc;
+}
+
+/*カートの中身・テーブルヘッダー*/
+#cartcheck thead th {
+	padding:3px 0px;
+	border:1px solid #cccccc;
+	background-color:#dddddd;
+	
+	text-align:center;
+	white-space:nowrap;
+}
+
+/*カートの中身・テーブルボディ　～繰り返し部分～*/
+#cartcheck tbody td {/*右寄せ*/
+	padding:3px 3px 3px 0px;
+	border:1px solid #cccccc;
+	text-align:right;
+}
+
+#cartcheck tbody .ctr,
+#cartcheck tbody #deleteform td,
+#cartcheck tbody #addform td {/*中央寄せ*/
+	padding:3px 0px;
+	border:1px solid #cccccc;
+	text-align:center;
+}
+
+/*カートの中身・テーブルフッター　～小計部分～*/
+#cartcheck tfoot th {/*右寄せ*/
+	padding:3px 12px 3px 0px;
+	border:1px solid #cccccc;
+	background-color:#dddddd;
+	text-align:right;
+}
+
+#cartcheck tfoot td {/*右寄せ*/
+	padding:3px 3px 3px 0px;
+	border:1px solid #cccccc;
+	text-align:right;
+}
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+●2-2．カートの中身ページの
+		メール＆パスフォーム
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+/*ラッパー*/
+#cart-pw {
+	padding:10px 20px;
+}
+
+/*フォーム入力フィールドセット*/
+#cart-pw fieldset {
+	margin-bottom:20px;
+}
+
+/*中のテーブル・共通*/
+#cart-pw table {
+	margin:6px;
+}
+
+/*中のテーブル・セル枠無し*/
+#cart-pw table td{
+	padding:3px 6px;
+}
+
+/*中のテーブル・ボーダーつき*/
+#cart-pw #pw-input {
+	border-collapse:collapse;
+	border-spacing:0px;
+}
+
+/*中のテーブル・ボーダーつきセル内*/
+#cart-pw #pw-input td {
+	padding:2px 5px;
+	border:1px solid #dddddd;
+}
+
+#cart-pw table td label {
+	text-align:right;
+}
+
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+●2-3．送信入力
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+●2-4．送信確認
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+.input-data {
+	margin:12px 0px 30px;
+	border-collapse:collapse;
+	border:1px solid #cccccc;
+}
+
+.check-data {
+	margin:6px 0px 12px;
+	border-collapse:collapse;
+	border:1px solid #cccccc;
+}
+
+/*項目*/
+.input-data th,
+.check-data th {
+	padding:6px 12px;
+	border:1px solid #cccccc;
+	background-color:#dddddd;
+	
+	text-align:left;
+}
+
+/*内容*/
+.input-data td,
+.check-data td {/*左寄せ*/
+	padding:6px 12px;
+	border:1px solid #cccccc;
+	text-align:left;
+}
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	IMEモード
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+/*有効*/
+.regist input#label1,.regist input#label2,.regist input#label13,.regist input#label14,.regist input#label15,.regist input#label16,
+.regist input#address1,.regist input#address2,
+.regist input#deli_address1,.regist input#deli_address2,
+.regist textarea#remark {
+	/*IME mode*/
+	ime-mode:active;
+}
+
+/*無効*/
+.regist input#zip1,.regist input#zip2,
+.regist input#tel1,.regist input#tel2,.regist input#tel3, 
+.regist input#deli_zip1,.regist input#deli_zip2,
+.regist input#deli_tel1,.regist input#deli_tel2,.regist input#deli_tel3, 
+.regist input#email,.regist input#oldmail,.regist input#newmail,.regist input#chkmail,
+.regist input#pwd,.regist input#npwd,.regist input#npwd2 {
+	/*IME mode*/
+	ime-mode:disabled;
+}
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+●5．送信
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+#next-credit form {
+	padding:10px 20px 20px;
+	line-height:150%;
+}
+
+#next-credit input {
+	margin:20px;
+}
+
+#fin-cart {
+	padding:10px 20px 20px;
+	line-height:150%;
+}
+
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+●6．メール＆パス変更
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+/*中のテーブル・ボーダーつき*/
+#cart-pw #pw-input2 {
+	width:100%;
+	border-collapse:collapse;
+	border-spacing:0px;
+}
+
+/*中のテーブル・ボーダーつきセル内　見出し部*/
+#cart-pw #pw-input2 th {
+	padding:2px 5px;
+	border:1px solid #dddddd;
+	text-align:right;
+
+	white-space:nowrap;
+}
+
+/*中のテーブル・ボーダーつきセル内*/
+#cart-pw #pw-input2 td {
+	width:100%;
+	padding:2px 5px;
+	border:1px solid #dddddd;
+}
+
+#cart-pw #pw-input2 td label {
+	text-align:right;
+}
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+●7．インプット外観変更
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+input.next {
+	font-size: 100%;
+	/*font-weight: bold;*/
+	background-color: #FF3300;
+	color: #FFF;
+	text-decoration: none;
+	border-top: 1px solid #cecece;
+	border-bottom: 2px solid #4a4a4a;
+	border-left: 1px solid #cecece;
+	border-right: 2px solid #4a4a4a;
+}
+
+input.next:hover {
+	border-bottom: 1px solid #cecece;
+	border-top: 2px solid #4a4a4a;
+	border-right: 1px solid #cecece;
+	border-left: 2px solid #4a4a4a;
+}
+
+input.next2 {
+	font-size: 100%;
+	font-weight: bold;
+	color:#2D2D2D;
+}

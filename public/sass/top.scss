@@ -1,0 +1,582 @@
+@charset "utf-8";
+@use "mixin" as *;
+/* ======================================================================
+    Mainvisual
+====================================================================== */
+.mainvisual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url(../images/top/0x0.webp) no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  @include tb2 {
+    background-attachment: unset;
+  }
+  @include sp {
+    padding: 13rem 0 7rem;
+    height: auto;
+  }
+  &__content {
+    position: relative;
+    margin-top: 5rem;
+
+    @include laptop {
+      margin-top: 15vw;
+    }
+    @include tb2 {
+      margin-top: 13vw;
+    }
+  }
+  &__move1 {
+    position: absolute;
+    top: -15rem;
+    right: -15rem;
+    z-index: 2;
+    width: 10rem;
+    opacity: 0.7;
+    animation: moving 35s linear infinite alternate;
+
+    @include sp {
+      top: -7rem;
+      width: 4rem;
+    }
+  }
+  &__move2 {
+    position: absolute;
+    top: -15rem;
+    left: -15rem;
+    z-index: 2;
+    width: 8rem;
+    opacity: 0.7;
+    transform: rotate(240deg);
+    animation: moving2 15s linear infinite alternate;
+
+    @include sp {
+      top: -7rem;
+      width: 5rem;
+    }
+  }
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(9, 68, 97, 1);
+    content: "";
+    opacity: 0.62;
+  }
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    object-fit: cover;
+    opacity: 0.5;
+    &.ship {
+    }
+  }
+  &__heading {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    font-size: 7rem;
+    line-height: 1;
+
+    @include laptop {
+      font-size: 5.7rem;
+    }
+    @include tb2 {
+      font-size: 7vw;
+    }
+    &-sub {
+      font-weight: 100;
+      font-size: 5rem;
+
+      @include laptop {
+        font-size: 4rem;
+      }
+      @include tb2 {
+        font-size: 5vw;
+      }
+    }
+    &:after {
+      display: block;
+      margin: 4rem auto 5rem;
+      width: 20rem;
+      height: 0.4rem;
+      // border-radius: 5rem;
+      background: #fff;
+      content: "";
+
+      @include sp {
+        margin: 2rem auto 2rem;
+      }
+    }
+  }
+  &__text {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 200;
+    font-size: 2.5rem;
+    line-height: 1.5;
+
+    @include sp {
+      font-size: 1.6rem;
+    }
+  }
+}
+@keyframes rotate {
+  // Đổi từ "rotale" thành "rotate"
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes moving {
+  0% {
+    right: -5rem;
+  }
+  100% {
+    right: 55rem;
+    transform: rotate(-40deg);
+  }
+}
+@keyframes moving2 {
+  0% {
+    left: -5rem;
+  }
+  100% {
+    left: 55rem;
+    transform: rotate(360deg);
+  }
+}
+/* ======================================================================
+    Check
+====================================================================== */
+.check {
+  position: relative;
+  padding: 10rem 0;
+  background-size: cover;
+
+  @include tb2 {
+    padding: 5rem 0;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    margin: auto;
+    width: 120rem;
+    height: 120rem;
+    background: url(../images/top/circle.jpg) no-repeat center top;
+    background-size: 100% auto;
+    mix-blend-mode: multiply;
+    content: "";
+    opacity: 0.9;
+    animation: rotate 100s linear infinite; // Đổi từ "rotale" thành "rotate"
+
+    @include tb2 {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      opacity: 0.5;
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    margin: 0 14rem 5rem;
+
+    @include tb2 {
+      margin: 0 0 4rem;
+    }
+    @include sp {
+      gap: 0;
+    }
+  }
+  &__item {
+    position: relative;
+    width: calc(100% / 2 - 1rem);
+
+    @include sp {
+      margin-bottom: 1%;
+      width: 49%;
+    }
+    // &-icon {
+    //   position: absolute;
+    //   top: -.5rem;
+    //   left: -.5rem;
+    //   display: block;
+    //   width: 1rem;
+    //   height: 1rem;
+    //   background: var(--color-secondary);
+    //   content: "";
+    //   &--2 {
+    //     top: -.5rem;
+    //     right: -.5rem;
+    //     left: auto;
+    //   }
+    // }
+  }
+  &__text {
+    font-weight: 600;
+
+    @include tb2 {
+      text-align: center;
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+  }
+  &__link {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 2rem 6rem;
+    // &:hover {
+    //   background: var(--color-primary);
+    // }
+    // &:before {
+    //   position: absolute;
+    //   top: -1rem;
+    //   left: -1rem;
+    //   z-index: 3;
+    //   width: 20px;
+    //   height: 20px;
+    //   border-right: 1px solid var(--color-secondary);
+    //   border-bottom: 1px solid var(--color-secondary);
+    // border-radius: 1px;
+    //   content: "";
+    //   transition: var(--transition);
+    //   transform: rotate(180deg);
+    // }
+    // &:after {
+    //   position: absolute;
+    //   right: -1rem;
+    //   bottom: -1rem;
+    //   z-index: 3;
+    //   width: 10px;
+    //   height: 10px;
+    //   border-right: 1px solid var(--color-secondary);
+    //   border-bottom: 1px solid var(--color-secondary);
+    // border-radius: 1px;
+    //border-radius: 1rem 4rem 1rem 2rem;
+    background: rgb(0, 91, 157);
+    background: linear-gradient(
+      -49deg,
+      rgba(0, 91, 157, 1) 0%,
+      rgba(0, 65, 112, 1) 100%
+    );
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2rem;
+
+    @include sp {
+      padding: 2rem 0.5rem 4rem;
+      height: 100%;
+    }
+    &:after {
+      position: absolute;
+      right: 0;
+      bottom: 3rem;
+      left: 0;
+      display: block;
+      margin: auto;
+      width: 1.745rem;
+      height: 0.98rem;
+      border: 1px solid #fff;
+      background: #fff;
+      color: #fff;
+      content: "";
+
+      mask-image: url(../images/common_img/btn-arrow-white.svg);
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      @include tb2 {
+        bottom: 2rem;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: var(--color-secondary);
+      content: "";
+      opacity: 0.9;
+      transition: all ease 0.3s;
+    }
+    &--number1 {
+      background: url(../images/top/btn1.jpg) no-repeat center top;
+      background-size: cover;
+    }
+    &--number2 {
+      // border-radius: 4rem 1rem 2rem 1rem;
+      background: url(../images/top/btn2.jpg) no-repeat center top;
+      background-size: cover;
+    }
+    &--number3 {
+      // border-radius: 2rem 1rem 4rem 1rem;
+      background: url(../images/top/btn3.jpg) no-repeat center top;
+      background-size: cover;
+    }
+    &--number4 {
+      // border-radius: 1rem 2rem 1rem 4rem;
+      background: url(../images/top/btn4.jpg) no-repeat center top;
+      background-size: cover;
+    }
+    &--number5 {
+      // border-radius: 1rem 2rem 1rem 4rem;
+      background: url(../images/top/btn5.jpg) no-repeat center bottom;
+      background-size: cover;
+    }
+    &--number6 {
+      // border-radius: 1rem 2rem 1rem 4rem;
+      background: url(../images/top/number6.jpg) no-repeat center bottom;
+      background-size: cover;
+    }
+    &:hover {
+      &:before {
+        opacity: 0.5;
+      }
+    }
+    //   content: "";
+    //   transition: var(--transition);
+    // }
+  }
+  &__photo {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 8rem;
+    height: 6rem;
+
+    @include tb2 {
+      width: 6rem;
+    }
+    @include sp {
+      height: 5rem;
+    }
+    img {
+      width: auto;
+
+      @include sp {
+        max-height: 5rem;
+      }
+    }
+  }
+  &__text {
+    position: relative;
+    z-index: 2;
+  }
+}
+/* ======================================================================
+    Marine
+====================================================================== */
+.marine {
+  &__content {
+    display: flex;
+  }
+  &__text {
+    margin-bottom: 2rem;
+  }
+}
+/* ======================================================================
+    Starlink
+====================================================================== */
+.starlink {
+  padding: 0 !important;
+  &__wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10rem 0;
+    max-width: 192rem;
+    width: 100%;
+
+    @include tb2 {
+      flex-wrap: wrap;
+      padding-top: 0;
+      padding-bottom: 5rem;
+    }
+  }
+  &__text {
+    margin-bottom: 4rem;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+
+    @include tb2 {
+      order: 2;
+      width: 100%;
+    }
+  }
+  &__right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    width: 45%;
+    height: 100%;
+
+    @include tb2 {
+      position: relative;
+      order: 1;
+      margin-bottom: 3rem;
+      width: 100%;
+      height: 40vh;
+    }
+    &-item {
+      padding-bottom: 4rem;
+      width: 31%;
+      height: 100%;
+
+      &--img1 {
+        background: url(../images/top/slide1.png) repeat-y;
+        background-size: 100% auto;
+        animation: bg1 50s linear infinite both;
+
+        @include tb2 {
+          animation: bg1 120s linear infinite both;
+        }
+      }
+      &--img2 {
+        background: url(../images/top/slide2.png) repeat-y;
+        background-size: 100% auto;
+        animation: bg2 50s linear infinite both;
+
+        @include tb2 {
+          animation: bg2 120s linear infinite both;
+        }
+      }
+      &--img3 {
+        background: url(../images/top/slide3.png) repeat-y;
+        background-size: 100% auto;
+        animation: bg3 50s linear infinite both;
+
+        @include tb2 {
+          animation: bg3 120s linear infinite both;
+        }
+      }
+    }
+  }
+  &__inner {
+    padding: 0 5rem;
+
+    @include sp {
+      padding: 0 2rem;
+    }
+  }
+}
+@keyframes bg1 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 205.2%;
+  }
+}
+@keyframes bg2 {
+  0% {
+    background-position: 0 -10%;
+  }
+  100% {
+    background-position: 0 -158.92%;
+  }
+}
+@keyframes bg3 {
+  0% {
+    background-position: 0 30%;
+  }
+  100% {
+    background-position: 0 205.3%;
+  }
+}
+/* ======================================================================
+    Boat
+====================================================================== */
+.boat {
+  padding: 10rem 0;
+  background: url(../images/top/choose-map.png) no-repeat center center;
+
+  @include tb2 {
+    padding: 5rem 0;
+  }
+  &__photo {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+    text-align: center;
+
+    @include sp {
+      padding: 0;
+    }
+  }
+  &__list {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    gap: 2rem;
+    // border-radius: 2rem 1rem 4rem 1rem;
+    &-item {
+      padding: 1rem 2rem;
+      width: calc(100% / 3 - 2rem);
+      border: 1px solid #dadada;
+      // border-radius: 1rem 3rem 1rem 2rem;
+    }
+  }
+  .c-list-1 {
+    margin-bottom: 4rem;
+  }
+}
+/* ======================================================================
+    Market
+====================================================================== */
+.market {
+  padding: 10rem 0;
+  background: url(../images/top/partner-dot-bg.png) center center;
+
+  @include tb2 {
+    padding: 5rem 0;
+  }
+}

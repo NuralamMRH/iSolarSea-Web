@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+@mixin sp {
+  @media only screen and (width <= 767px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media only screen and (width <= 1600px) {
+    @content;
+  }
+}
+
+@mixin tb {
+  @media only screen and (width >= 768px) and (width <= 1024px) {
+    @content;
+  }
+}
+@mixin tb2 {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin tb3 {
+  @media only screen and (min-width: 1025px) and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin tb2 {
+  @media only screen and (width <= 1024px) {
+    @content;
+  }
+}
+
+@mixin sp2 {
+  @media only screen and (width <= 460px) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media print, screen and (width >= 768px) {
+    @content;
+  }
+}
+
+@mixin print {
+  @media print {
+    @content;
+  }
+}

@@ -1,0 +1,1619 @@
+/* Dashboard Styles */
+.dashboard {
+  padding: 20px 0 40px;
+}
+/* Regular styling for gear-size inputs */
+.gear-size-grid .gear-size-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Remove padding on mobile devices */
+@media screen and (max-width: 767px) {
+  .gear-size-grid .gear-size-input {
+    padding: 0;
+    font-size: 12px;
+  }
+}
+
+.dashboard__menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dashboard__menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  width: calc(13.666% - 10px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dashboard__menu-item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.dashboard__menu-item span {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dashboard__menu-item.active {
+  background-color: #0056b3;
+  color: white;
+}
+
+.dashboard__content {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.dashboard__section {
+  display: flex;
+  gap: 20px;
+}
+
+.dashboard__attachment {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.attachment-box,
+.camera-box {
+  background-color: #fff;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+}
+
+.camera-box {
+  height: 100px;
+}
+
+.attachment-box img,
+.camera-box img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.dashboard__form {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.dashboard__form-title {
+  color: #0056b3;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.form-row {
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+}
+
+.form-group label {
+  width: 250px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group input[type="text"] {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.form-group input[type="date"] {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-group select {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.fishing-method {
+  margin-top: 20px;
+}
+
+.fishing-table,
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fishing-table th,
+.fishing-table td,
+.spec-table th,
+.spec-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.fishing-table th {
+  background-color: #f2f2f2;
+}
+
+.spec-table td:first-child {
+  width: 200px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.spec-table input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.crew-info {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.crew-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.crew-row label {
+  width: 150px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.crew-row input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-submit {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.submit-btn {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #003d7a;
+}
+
+.qr-code {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.qr-code img {
+  width: 100px;
+  height: 100px;
+}
+
+.qr-info {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .dashboard__menu-item {
+    width: calc(33.333% - 10px);
+  }
+
+  .dashboard__section {
+    flex-direction: column;
+  }
+
+  .dashboard__attachment {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .attachment-box,
+  .camera-box {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard__menu-item {
+    width: calc(50% - 10px);
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-group label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .form-group input[type="text"] {
+    width: 100%;
+  }
+
+  .crew-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .crew-row label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard__menu-item {
+    width: 100%;
+  }
+
+  .dashboard__attachment {
+    flex-direction: column;
+  }
+}
+
+/* Add these styles to the bottom of your dashboard.css file */
+
+/* Vessel Information Card */
+.vessel-info-card {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.vessel-info-content {
+  background-color: #fff;
+  border: 1px solid #cce5ff;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.vessel-info-title {
+  color: #0056b3;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.vessel-info-section {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.vessel-info-section:last-of-type {
+  border-bottom: none;
+}
+
+.vessel-info-row {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.vessel-info-label {
+  width: 250px;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.vessel-info-sublabel {
+  font-weight: normal;
+  color: #666;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.vessel-info-value {
+  flex: 1;
+  font-size: 14px;
+}
+
+/* Fishing Methods Section */
+.fishing-methods-title,
+.crew-info-title {
+  color: #0056b3;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.fishing-method-row {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.fishing-method-label {
+  width: 250px;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.fishing-method-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.fishing-method-table th,
+.fishing-method-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.fishing-method-table th {
+  background-color: #f2f2f2;
+}
+
+.checked-box {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #0056b3;
+  color: white;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 2px;
+}
+
+.empty-box {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #999;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 2px;
+}
+
+.fishing-method-specs {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-row {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.spec-label {
+  width: 150px;
+  font-size: 13px;
+}
+
+.spec-value {
+  font-size: 13px;
+}
+
+.spec-sublabel {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+/* Crew Information Styles */
+.input-sublabel {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.crew-document-row {
+  margin-bottom: 15px;
+}
+
+.document-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.document-upload-container {
+  display: flex;
+  gap: 15px;
+}
+
+.document-upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border: 1px dashed #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.document-upload-box.small {
+  width: 60px;
+  height: 60px;
+}
+
+.document-upload-box.single {
+  width: 100px;
+  height: 100px;
+}
+
+.document-upload-box:hover {
+  border-color: #0056b3;
+  background-color: #f9f9f9;
+}
+
+.document-upload-box img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.document-upload-box.small img {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 2px;
+}
+
+.document-upload-box span {
+  font-size: 12px;
+  color: #666;
+}
+
+.crew-table-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.crew-header-name {
+  grid-column: 1;
+}
+
+.crew-header-id {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.crew-header-id-front,
+.crew-header-id-back {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+}
+
+.crew-member-row {
+  margin-bottom: 15px;
+}
+
+.crew-member-inputs {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.crew-name-input {
+  flex: 1;
+}
+
+.crew-id-uploads {
+  display: flex;
+  gap: 10px;
+}
+
+.crew-info-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.crew-info-row.indented {
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+
+.crew-info-label {
+  width: 230px;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.crew-info-sublabel {
+  font-weight: normal;
+  color: #666;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.crew-info-value {
+  flex: 1;
+  font-size: 14px;
+}
+
+.vessel-info-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.save-btn {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #003d7a;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .vessel-info-row,
+  .fishing-method-row,
+  .crew-info-row {
+    flex-direction: column;
+  }
+
+  .vessel-info-label,
+  .fishing-method-label,
+  .crew-info-label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .crew-info-row.indented {
+    margin-left: 20px;
+  }
+}
+
+/* Add these styles to your dashboard.css file */
+
+/* Fishing Method Table */
+.fishing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.fishing-table th,
+.fishing-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.fishing-table th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.fishing-table td {
+  font-size: 14px;
+}
+
+.fishing-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+.checkbox-input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Gear Size Grid */
+.gear-size-grid {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.gear-size-row {
+  display: grid;
+  grid-template-columns: 150px repeat(4, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.gear-size-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.gear-size-input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Tank Count */
+.tank-count-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tank-count-input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.tank-count-label {
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Crew Info Section Title */
+.dashboard__form-title {
+  color: #0056b3;
+  font-size: 18px;
+  margin: 25px 0 15px;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.vessel-info-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.save-btn {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #003d7a;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .vessel-info-row,
+  .fishing-method-row,
+  .crew-info-row {
+    flex-direction: column;
+  }
+
+  .vessel-info-label,
+  .fishing-method-label,
+  .crew-info-label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .crew-info-row.indented {
+    margin-left: 10px;
+  }
+}
+
+/* Add these styles to your dashboard.css file */
+
+/* Vessel Management Header and Tabs */
+.vessel-management-header {
+  margin-bottom: 20px;
+}
+
+.vessel-management-title {
+  color: #002855;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+  display: none; /* Hide this since we already have a title in tt-page */
+}
+
+.vessel-management-tabs {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 12px 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: #555;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.tab-button.active {
+  background-color: #0056b3;
+  color: white;
+}
+
+.tab-button {
+  background-color: #7d7d7d;
+}
+
+.plus-icon {
+  font-size: 11px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.search-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.search-btn {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-btn img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+/* Tab Content Styles */
+.tab-content {
+  width: 100%;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+/* Vessel List Styles */
+.vessel-list-container {
+  padding: 20px 0;
+}
+
+.vessel-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.vessel-list-header h3 {
+  font-size: 18px;
+  color: #0056b3;
+  margin: 0;
+}
+
+.vessel-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vessel-search {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.filter-btn {
+  background: #0056b3;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.filter-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Fleet Statistics */
+.fleet-statistics {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.statistics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.statistics-header h4 {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+.statistics-legend {
+  display: flex;
+  gap: 15px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legend-active {
+  background-color: #0056b3;
+}
+
+.legend-inactive {
+  background-color: #ff6b6b;
+}
+
+.statistics-chart {
+  width: 100%;
+  height: 200px;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.chart-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+}
+
+.chart-label {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.chart-bar {
+  width: 40px;
+  height: 150px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.chart-bar-active {
+  width: 100%;
+  background-color: #0056b3;
+  border-radius: 4px 4px 0 0;
+}
+
+.chart-bar-inactive {
+  width: 100%;
+  background-color: #ff6b6b;
+  margin-bottom: 2px;
+}
+
+.chart-value {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Vietnam Map */
+.vietnam-map-container {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.vietnam-map-container h4 {
+  font-size: 16px;
+  color: #333;
+  margin: 0 0 15px 0;
+}
+
+.vietnam-map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.map-regions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.region-marker {
+  position: absolute;
+  cursor: pointer;
+}
+
+.region-marker.north {
+  top: 25%;
+  left: 70%;
+}
+
+.region-marker.central {
+  top: 45%;
+  left: 65%;
+}
+
+.region-marker.south {
+  top: 65%;
+  left: 60%;
+}
+
+.region-marker.mekong {
+  top: 85%;
+  left: 40%;
+}
+
+.region-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #0056b3;
+  border-radius: 50%;
+  position: relative;
+}
+
+.region-dot::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #0056b3;
+  border-radius: 50%;
+  top: -6px;
+  left: -6px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+.region-info {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: none;
+  left: 20px;
+  top: 0;
+}
+
+.region-marker:hover .region-info {
+  display: block;
+}
+
+.region-info h5 {
+  font-size: 14px;
+  margin: 0 0 5px 0;
+  color: #0056b3;
+}
+
+.region-info ul {
+  margin: 0;
+  padding-left: 15px;
+  font-size: 12px;
+}
+
+.region-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.region-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.region-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.region-btn:hover,
+.region-btn.active {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Vessel Type Tabs */
+.vessel-type-tabs {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0056b3;
+}
+
+.vessel-type-btn {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px 4px 0 0;
+}
+
+.vessel-type-btn.active {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Vessel Cards */
+.vessel-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.vessel-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.vessel-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #0056b3;
+  color: white;
+}
+
+.vessel-card-header h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.vessel-tag-btn {
+  background-color: white;
+  color: #0056b3;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.vessel-detail-btn {
+  background-color: white;
+  color: #0056b3;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.vessel-card-image {
+  height: 150px;
+  overflow: hidden;
+}
+
+.vessel-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vessel-card-info {
+  padding: 15px;
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 5px;
+  gap: 10px;
+}
+
+.info-label {
+  font-weight: 500;
+  color: #666;
+}
+
+.info-value {
+  color: #333;
+}
+
+/* Fleet Records */
+.fleet-records {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.fleet-records h3 {
+  font-size: 18px;
+  color: #0056b3;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.time-selector {
+  margin-bottom: 20px;
+}
+
+.time-selector h4 {
+  font-size: 16px;
+  margin: 0 0 10px 0;
+}
+
+.time-picker {
+  display: flex;
+  align-items: center;
+  background-color: #e6f7ff;
+  border-radius: 20px;
+  padding: 5px 15px;
+  width: fit-content;
+}
+
+.time-option {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.time-option.active {
+  background-color: #0056b3;
+  color: white;
+  border-radius: 15px;
+}
+
+.calendar-icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.calendar-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.time-dropdown {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+  margin-top: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.time-dropdown-option {
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.time-dropdown-option:hover {
+  background-color: #f0f0f0;
+}
+
+.fleet-table {
+  overflow-x: auto;
+}
+
+.fleet-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.menu-header {
+  cursor: pointer;
+}
+
+.fleet-table th,
+.fleet-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  min-width: 150px;
+}
+
+.fleet-table th {
+  background-color: #2a4a6db3;
+  color: white;
+}
+
+.fleet-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.gps-cell {
+  background-color: #333;
+}
+
+/* Vietnam Map Styles */
+.vietnam-map-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.vietnam-map-content {
+  display: flex;
+  align-items: stretch;
+}
+
+.vietnam-map {
+  width: 33%;
+  position: relative;
+}
+
+.map-image {
+  width: 100%;
+  height: auto;
+  fill: #0056b3; /* Blue fill color for the map */
+}
+
+.region-timeline {
+  position: relative;
+}
+
+.timeline-container {
+  position: relative;
+  padding-left: 20px;
+  height: 100%;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #0056b3;
+}
+
+.region-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.region-dot {
+  position: absolute;
+  left: -28px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 4px solid #0056b3;
+  z-index: 2;
+}
+
+.region-item.north .region-dot {
+  background-color: #f87171;
+  top: 20px;
+}
+
+.region-item.central .region-dot {
+  background-color: #60a5fa;
+  top: 20px;
+}
+
+.region-item.south .region-dot {
+  background-color: #fcd34d;
+  top: 20px;
+}
+
+.region-item.mekong .region-dot {
+  background-color: #fca5a5;
+  top: 20px;
+}
+
+.region-card {
+  margin-left: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.region-status-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.dashboard__menu-item {
+  display: flex;
+  align-items: center;
+  /* ... your existing styles ... */
+}
+
+.dashboard__menu-item iconify-icon {
+  margin-right: 10px;
+  color: #0056b3; /* Match your theme color */
+}
+
+.dashboard__menu-item.active iconify-icon {
+  color: #ffffff; /* White icon for active state */
+}
+
+/* fleet css  */
+
+/* Add this to your existing styles */
+.fishing-regions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.region-box {
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.region-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.StepProgress {
+  position: relative;
+  /* padding-left: px; */
+  list-style: none;
+}
+
+.StepProgress small {
+  color: #222222;
+}
+
+.StepProgress::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 9px;
+  width: 5px;
+  height: 100%;
+  /* border-left: 3px solid #243f98; */
+
+  /* Default connecting line */
+}
+
+.StepProgress-item {
+  position: relative;
+  counter-increment: list;
+  padding-bottom: 20px;
+}
+
+.StepProgress-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -45px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  /* Set height for SVG */
+  background-size: contain;
+  /* background-color: rgb(23, 94, 237); */
+  /* Ensure SVG scales properly */
+  background-repeat: no-repeat;
+}
+
+.StepProgress-item.no-number:first-child::before {
+  background-color: red;
+}
+
+.StepProgress-item.no-number:nth-child(2)::before {
+  background-color: rgb(73, 123, 224);
+}
+
+.StepProgress-item.no-number:nth-child(3)::before {
+  background-color: rgba(218, 196, 51, 0.751);
+}
+.StepProgress-item.no-number:nth-child(4)::before {
+  background-color: rgba(218, 129, 51, 0.751);
+}
+
+.StepProgress-item.no-number::before {
+  background-color: rgb(29, 110, 168);
+}
+
+.StepProgress-item::before {
+  background-color: rgb(241, 163, 90);
+}
+
+/* Connecting lines */
+.StepProgress-item::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  bottom: 0;
+  width: 1px;
+  /* Border width */
+  height: 100%;
+  background: linear-gradient(to bottom, #000 50%, dashed 50%);
+  background-size: 100% 200%;
+  /* Adjust background for dashed */
+  background-repeat: no-repeat;
+}
+
+/* Current step styling */
+.StepProgress-item.current::before {
+  border-radius: 50%;
+}
+
+.StepProgress-item.is-done::after {
+  content: "";
+}
+
+.StepProgress-item.current::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: -33px;
+  width: 10px;
+  height: 50%;
+  border-left: 1px dashed #bf9b3e;
+}
+
+.StepProgress strong {
+  display: block;
+}
+
+.vietnam-map-content::before {
+  content: "";
+  position: absolute;
+  top: 550px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("assets/images/common_img/subway--world-1.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 800px;
+  opacity: 0.5;
+}
