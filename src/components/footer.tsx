@@ -1,4 +1,5 @@
 import { Anchor, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "@/hooks/use-translation";
 
 export const Footer = () => {
@@ -65,11 +66,16 @@ export const Footer = () => {
 
         <div className="border-t border-white/20 pt-8 text-center text-white/70">
           <p>{t("landing.footer.copyright", { year: new Date().getFullYear() })}</p>
+          <div className="mt-2">
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+          </div>
           <p className="mt-2">
             {t("landing.footer.visit.prefix")} {" "}
-            <a 
-              href="https://www.iTruckSea.com" 
-              target="_blank" 
+            <a
+              href="https://www.iTruckSea.com"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:underline font-semibold"
             >

@@ -10,6 +10,8 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+dist.zip
+*.zip
 *.local
 
 # Editor directories and files
@@ -30,3 +32,15 @@ dist-ssr
 .env
 .env.devlopment
 .env.production
+.env.example
+
+#ignore .certs files
+.certs
+
+#ignore .github files
+.github
+
+#ignore .claude files
+.claude
+
+
